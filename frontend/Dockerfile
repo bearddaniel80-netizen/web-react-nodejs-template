@@ -15,7 +15,7 @@ FROM git-base AS frontend
 
 WORKDIR /downloads
 
-RUN git clone --depth=1 https://github.com/bearddaniel80-netizen/web-template.git
+RUN git clone --depth=1 https://github.com/bearddaniel80-netizen/web-react-template.git
 
 # ----------- lib -------------
 
@@ -30,7 +30,7 @@ FROM deps AS runtime
 
 WORKDIR /app
 
-COPY --from=frontend /downloads/web-template/frontend .
+COPY --from=frontend /downloads/web-react-template/frontend .
 
 # To generate docs
 # RUN npm run docs
